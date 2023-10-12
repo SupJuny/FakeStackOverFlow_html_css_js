@@ -1,0 +1,111 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/index.css">
+  <script type="module" src="src/index.js"></script>
+</head>
+
+<body>
+  <h1 id='title'>Fake Stack Overflow</h1>
+  <input id="search_input" type="text" placeholder="Search..."></input>
+
+  <!-- main page left side (question and tag) -->
+  <div id='main_left'>
+    <br></br>
+    <botton id='question_menu' class='side_content'>Questions</botton>
+    <br></br>
+    <br></br>
+    <br></br>
+    <botton id='tag_menu' class='side_content'>Tags</botton>
+  </div>
+
+  <!-- main page right side (all questions, askquestion, and question lists) -->
+  <div id='main_right'>
+
+    <!-- main question lists -->
+    <div id="all_question_and_buttons">
+      <div>
+        <h2 id='allQ'>All Questions</h2>
+        <button class="askQ" id='askQ_main'>Ask Question</button>
+      </div>
+      <div id='number_and_sorting_buttons'>
+        <p id='numQ'></p>
+
+        <div id='sorting_btns'>
+          <button id='new_button' class='sort_buttons'>Newest</button>
+          <button id='active_button' class='sort_buttons'>Active</button>
+          <button id='unanswer_button' class='sort_buttons'>Unanswered</button>
+        </div>
+
+      </div>
+      <br>
+      <div id="main_questions_load"></div>
+    </div>
+
+    <!-- ask and post question page -->
+    <div id='ask_question_page'>
+      <h1>Question Title*</h1>
+      <p style="font-style: italic;"> Limit title to 100 characters or less</p>
+      <textarea rows="2" cols="50" style="font-size: x-large;" id='new_q_title'></textarea>
+      <h1>Question Text*</h1>
+      <p style="font-style: italic;"> Add details</p>
+      <textarea rows="8" cols="50" style="font-size: x-large;" id='new_q_text'></textarea>
+      <h1>Tags*</h1>
+      <p style="font-style: italic;"> Add keywords seperated by whitespace</p>
+      <textarea rows="2" cols="50" style="font-size: x-large;" id='new_q_tag'></textarea>
+      <h1>Username*</h1>
+      <textarea rows="2" cols="50" style="font-size: x-large;" id='new_q_user'></textarea>
+      <br></br>
+      <br>
+      <button id="post_btn"> Post Question </button>
+      <p id="mandatory">* indicated mandatory fields</p>
+    </div>
+
+    <!-- showing question content -->
+    <div id="question_content_page">
+      <div id="q_content_area">
+        <div class="space" id="q_content_top">
+          <h3 id='q_content_num_ans'>num_answers</h3>
+          <h3 id='q_content_title'>title</h3>
+        </div>
+        <button class="askQ" id='askQ_cont'>Ask Question</button>
+        <div class="space" id="q_content_bottom">
+          <h3 id='q_content_num_view'>num_views</h3>
+          <p id='q_content_text'>text</p>
+          <div id="q_content_user_and_time">
+            <p id='q_content_user'>user</p>
+            <p id="q_content_time">time</p>
+          </div>
+        </div>
+      </div>
+      <div id='q_content_answer_area'></div>
+      <button id="ans_question_btn">Answer Question</button>
+    </div>
+
+    <!-- showing answer question content -->
+    <div id="answer_question_page">
+      <h1>Username*</h1>
+      <textarea rows="2" cols="50" style="font-size: x-large;" id='ans_q_user'></textarea>
+      <br>
+      <h1>Answer Text*</h1>
+      <textarea rows="8" cols="50" style="font-size: x-large;" id='ans_q_text'></textarea>
+      <br>
+      <br>
+      <button id="ans_post_btn">Post Answer</button>
+      <p id="mandatory">* indicated mandatory fields</p>
+    </div>
+
+    <!-- Tag Page -->
+    <div id="tag_page">
+      <div id="tag_headers">
+        <h1 id="num_tags"></h1>
+        <h1 id="all_tags">All Tags</h1>
+        <button class="askQ" id='askQ_tag'>Ask Question</button>
+      </div>
+      <div id="tags_area"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
